@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controles.MediaControle.Media"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" Padding="10">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="MediaElement"/>
+                <Label Text="Propriedades: ShowsPlaybackControls, AutoPlay, Aspect, IsLooping, Volume, KeepScreenOn"/>
+                <Label Text="Propriedade KeepScreenOn: Impede o celular de bloquear a tela, útil para manter a tela aberta em casos de vídeos longos"/>
+                <Label Text="Métodos: play, pause, stop"/>
+                <Label Text="Eventos: MediaOpened, MediaFiled, MediaEnded"/>
+
+                <Label Text="MP3" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+                <xct:MediaElement IsLooping="True" Source="ms-appx:///salamisoundalarm.mp3" HeightRequest="100"
+                              HorizontalOptions="FillAndExpand" ShowsPlaybackControls="True" AutoPlay="False"/>
+
+                <Label Text="MP4 - Exemplo de controle de media personalizado" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                <xct:MediaElement x:Name="mediaElement" MediaOpened="mediaElement_MediaOpened" KeepScreenOn="True" Volume="1" Source="ms-appx:///FullMoon.mp4" HeightRequest="200" 
+                              HorizontalOptions="FillAndExpand" ShowsPlaybackControls="True" AutoPlay="False" Aspect="AspectFill"/>
+
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Label x:Name="lblposicao" Text="00:00"/>
+                    <Slider x:Name="sldposicaovideo" IsEnabled="false" HorizontalOptions="FillAndExpand" Minimum="0.0" Maximum="1.0" MinimumTrackColor="Green" MaximumTrackColor="Gray" ThumbColor="LawnGreen"></Slider>
+                    <Label x:Name="lblduracao" Text="00:00" HorizontalOptions="End"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button Text="Play" Clicked="Play" BackgroundColor="LightGray" HeightRequest="50" VerticalOptions="CenterAndExpand"/>
+                    <Button Text="Pause" Clicked="Pause" BackgroundColor="LightGray" HeightRequest="50"/>
+                    <Button Text="Stop" Clicked="Stop" BackgroundColor="LightGray" HeightRequest="50"/>
+
+                    <StackLayout>
+                        <Slider ValueChanged="SliderVolume" Minimum="0.0" Maximum="1.0" Value="1" MinimumTrackColor="Green" MaximumTrackColor="Gray" ThumbColor="LawnGreen"/>
+                        <Label x:Name="lblvolume" Text="Volume" FontSize="10" CharacterSpacing="1" HorizontalTextAlignment="Center" TextColor="Green"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <Label Text="MP4 ONLINE" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                <xct:MediaElement Source="https://sec.ch9.ms/ch9/f9d9/6f5330ad-8b07-4b9c-a76d-3c744627f9d9/UsingYoutubeAPIWithXamarinForms_high.mp4"
+                      AutoPlay="False" ShowsPlaybackControls="True" Aspect="AspectFit" HeightRequest="200" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

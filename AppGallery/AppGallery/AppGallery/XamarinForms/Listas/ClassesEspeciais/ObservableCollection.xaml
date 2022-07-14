@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Listas.ClassesEspeciais.ObservableCollection">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="ObservableCollection"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Adicionar Item" Clicked="AdicionarItem" VerticalOptions="CenterAndExpand"/>
+                <Button Text="Remover Item" Clicked="RemoverItem" VerticalOptions="CenterAndExpand"/>
+                <ListView x:Name="Lista01">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Nome}" Detail="{Binding Sobrenome}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controles.NavegadorControle.Navegador" Padding="10">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="WebView"/>
+                <Label Text="Propriedades: Source(URL,HTML), CanGoForward, CanGoBack"/>
+                <Label Text="Métodos: GoBack, GoForward, Reload"/>
+                <Label Text="Eventos: Navigated, Navigating"/>
+                <Label Text="Observação: Habilitar internet em cada tipo de projeto
+                         Permitir http para android superior a 9 deve ser colocada a propriedade android:usesCleartextTraffic true"/>
+
+                <Frame Margin="0,20,0,0" BorderColor="Gray" Padding="1">
+                    <WebView x:Name="wv1" Source="https://www.google.com" HorizontalOptions="FillAndExpand" HeightRequest="300"/>
+                </Frame>
+
+                <Frame Margin="0,20,0,0" BorderColor="Gray" Padding="1">
+                    <WebView x:Name="wv2" HorizontalOptions="FillAndExpand" HeightRequest="300"/>
+                </Frame>
+
+                <Frame Margin="0,20,0,0" BorderColor="Gray" Padding="5">
+                    <StackLayout>
+                        <Label x:Name="lblurl" Text="URL" HorizontalTextAlignment="Center" FontSize="18"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Button Text="Voltar" Clicked="Voltar_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="LightGreen"/>
+                            <Button Text="Atualizar" Clicked="Atualizar_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="LightGreen"/>
+                            <Button Text="Próximo" Clicked="Proximo_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="LightGreen"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Margin="0,20,0,0" BorderColor="Gray" Padding="1">
+                    <WebView x:Name="wv3" Source="https://www.totvs.com" HorizontalOptions="FillAndExpand" HeightRequest="300" Navigated="wv3_Navigated" Navigating="wv3_Navigating"/>
+                </Frame>
+
+                <Frame BorderColor="Gray" Padding="5">
+                    <Label x:Name="lblstatus"/>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

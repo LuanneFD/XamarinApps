@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "nkPSIRASQvxttPf4g2kPyPqjTwmMxs9YOTKdAZCtAQ/LSkvdxlvbpcobuabxkS+BMlGGvkgQixusEdrfDNXY4A==",
+  "success": true,
+  "projectFilePath": "C:\\Dev\\AppShopping\\AppShopping\\AppShopping\\AppShopping.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\luanne.ferreira\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\luanne.ferreira\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\luanne.ferreira\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\luanne.ferreira\\.nuget\\packages\\xamarin.forms\\5.0.0.2125\\xamarin.forms.5.0.0.2125.nupkg.sha512"
+  ],
+  "logs": []
+}

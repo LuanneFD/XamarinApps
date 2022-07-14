@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Listas.TableView.Tabela" Padding="10">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="TableView: Cada linha pode ser personalizada. Conceito de céculas"/>
+            <Label Text="HasUnevenRows: O tamanho da linha é gerado automaticamente."/>
+            <Label Text="Intent: Intenção da tabela, formulário, menu, configuraçoes ou listagem de dados."/>
+            <Label Text="ViewCell: É possível criar a linha de forma customizada usando os outros componentes existentes."/>
+            <!--TextCell,ImageCell,EntryCell,SwitchCell,ViewCell-->
+            <TableView HasUnevenRows="True" Intent="Data">
+                <TableRoot>
+                    <TableSection Title="Gerência">
+                        <TextCell Tapped="TextCell_Tapped" Text="Geraldo Rodrigues Souza" TextColor="Black" Detail="Gerente de TI" DetailColor="Gray"/>
+                        <TextCell Text="José Rodrigues Souza" TextColor="Black" Detail="Gerente Financeiro" DetailColor="Gray"/>
+                        <TextCell Text="Edson Rodrigues Souza" TextColor="Black" Detail="Gerente de Comunicação" DetailColor="Gray"/>
+                    </TableSection>
+                    <TableSection Title="Supervisão">
+                        <ImageCell Text="Alex Ribeiro da Silva" TextColor="Black" Detail="Supervisor de TI" DetailColor="Gray" ImageSource="foto.jpg"/>
+                    </TableSection>
+                    <TableSection Title="Operacional">
+                        <TextCell Text="Rodrigo Costa" TextColor="Black" Detail="Analista de Sistemas Junior" DetailColor="Gray"/>
+                    </TableSection>
+                    <TableSection Title="Formulário de Cadastro">
+                        <EntryCell Label="Nome:" LabelColor="Gray" Placeholder="Digite o nome do colaborador"/>
+                        <EntryCell Label="Nome da Mãe:" LabelColor="Gray" Placeholder="Digite o nome"/>
+                        <SwitchCell Text="É casado?" OnColor="Yellow"/>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Sexo" Padding="20,10,0,10" VerticalOptions="CenterAndExpand"/>
+                                <RadioButton Content="Masculino" HorizontalOptions="EndAndExpand"/>
+                                <RadioButton Content="Feminino" Padding="0,0,0,10"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <Button Text="Cancelar" BackgroundColor="LightSalmon" HorizontalOptions="FillAndExpand"/>
+                                <Button Text="Salvar" BackgroundColor="LightGreen" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

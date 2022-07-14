@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controles.DeslizanteControle.Deslizante" Padding="10">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Minimum, Maximum, Value"/>
+            <Slider Minimum="0" Maximum="5" Value="3" MinimumTrackColor="DarkGreen" MaximumTrackColor="Gray" ThumbColor="Aquamarine"></Slider>
+
+            <Label Text="MinimumTrackColor, MaximumTrackColor, ThumbColor"/>
+            <Slider MinimumTrackColor="Green" MaximumTrackColor="Brown" ThumbColor="LightGreen"></Slider>
+
+            <Label Text="ThumbImageSource"/>
+            <Slider ThumbImageSource="net.png" WidthRequest="0.5" MinimumTrackColor="Gray" MaximumTrackColor="Gray" ThumbColor="Gray"></Slider>
+
+            <Label Text="Eventos:ValueChanged, DragStarted, DragCompleted"/>
+            <Slider MinimumTrackColor="Green" MaximumTrackColor="Brown" ThumbColor="LightGreen"
+                    ValueChanged="Slider_ValueChanged"
+                    DragStarted="Slider_DragStarted"
+                    DragCompleted="Slider_DragCompleted"></Slider>
+            <Label x:Name="lblInfo1" Text="-"></Label>
+            <Label x:Name="lblInfo2" Text="-"></Label>
+            <Label x:Name="lblInfo3" Text="-"></Label>
+
+            <Label Text="Dica (incremento)"/>
+            <Slider Maximum="10" Minimum="0" ValueChanged="Slider_ValueChanged_Step" MinimumTrackColor="Gray" MaximumTrackColor="Gray" ThumbColor="Gray"></Slider>
+            <Label x:Name="lbldica" Text="-"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

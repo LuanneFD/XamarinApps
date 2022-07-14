@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JobSearch.App.Views.Register">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="20">
+                <ImageButton Clicked="Voltar" Style="{StaticResource ButtonBack}"/>
+                <Label Text="JobSearch" Style="{StaticResource Title}" HorizontalOptions="Center" TranslationY="4"/>
+            </StackLayout>
+            <BoxView BackgroundColor="#D7CCFF" HeightRequest="1"/>
+            <StackLayout VerticalOptions="CenterAndExpand" TranslationY="-29">
+                <Label x:Name="txtMessages" TextColor="OrangeRed" LineHeight="1.2"/>
+                
+                <Frame StyleClass="EntryFrame">
+                    <Entry x:Name="txtnome" ReturnType="Next" Placeholder="Nome"/>
+                </Frame>
+                <Frame StyleClass="EntryFrame">
+                    <Entry x:Name="txtemail" ReturnType="Next" Placeholder="E-mail"/>
+                </Frame>
+                <Frame StyleClass="EntryFrame">
+                    <Entry x:Name="txtsenha" ReturnType="Done" Placeholder="Senha"/>
+                </Frame>
+                <StackLayout Orientation="Horizontal">
+                    <Button Clicked="Save" Text="Salvar" HorizontalOptions="Start" WidthRequest="160"/>
+                </StackLayout>
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

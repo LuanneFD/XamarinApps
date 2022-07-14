@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Layouts.BarraDeRolageLayout.BarraDeRolagem">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        
+        <ScrollView Grid.Row="0" Orientation="Both" Scrolled="ScrollView_Scrolled">
+                <StackLayout Padding="10">
+                    <BoxView Color="Black" WidthRequest="500" HeightRequest="500"></BoxView>
+                   <Label x:Name="Posicao" Text="ScrollView 01" BackgroundColor="Black" TextColor="White"/>
+                </StackLayout>
+            </ScrollView>
+        <ScrollView Grid.Row="1" x:Name="Barra">
+            <StackLayout Margin="20" >
+                <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <StackLayout Orientation="Horizontal" Margin="10">
+                    <BoxView BackgroundColor="Black"></BoxView>
+                    <BoxView BackgroundColor="Black"></BoxView>
+                    <BoxView BackgroundColor="Black"></BoxView>
+                    <BoxView BackgroundColor="Black"></BoxView>
+                    <BoxView BackgroundColor="Black"></BoxView>
+                    <BoxView BackgroundColor="Black"></BoxView>
+                    <BoxView BackgroundColor="Black"></BoxView>
+                    <BoxView BackgroundColor="Black"></BoxView>
+                    <BoxView BackgroundColor="Black"></BoxView>
+                </StackLayout>
+                </ScrollView>
+                <Button Text="Clique-me" BackgroundColor="Black" TextColor="White" Clicked="RolarParaSegundaLabel"></Button>
+                <Label 
+Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis quis mauris quis rutrum. Aenean suscipit erat et nisi ultricies convallis. Nulla orci justo, dignissim quis cursus vitae, venenatis et risus. Sed porta tellus suscipit, malesuada est vel, egestas felis. Aliquam erat volutpat. Pellentesque bibendum mi cursus, maximus nunc vitae, vehicula dolor. Nulla facilisi.
+Suspendisse eleifend justo sem, in malesuada nisl scelerisque id. Donec finibus neque felis, quis tristique ante maximus non. Duis convallis nisi vestibulum fermentum faucibus. Pellentesque ac lectus sit amet felis ultrices ultricies ut a tellus. Nam cursus mattis ipsum eu sodales. Vivamus ultrices sollicitudin purus, sed luctus tellus porta tempus. Phasellus in efficitur est, vitae tincidunt nisi. Proin porttitor gravida felis, vel eleifend ligula maximus at. Nulla id ex fermentum, porta leo nec, pretium arcu. Ut sed accumsan est, ac dapibus ex. In neque dui, lacinia ac neque a, scelerisque blandit massa. Nunc ultricies at dolor vitae consectetur. Pellentesque convallis sed diam nec placerat.
+Proin scelerisque quam a est vestibulum, id feugiat mauris efficitur. Mauris vitae ornare lectus. Aenean id nisl interdum ante elementum sollicitudin sit amet et lectus. Nunc accumsan, dui sed lacinia fermentum, massa orci commodo elit, ac convallis nulla purus non neque. Integer sollicitudin sem mi. Vestibulum rutrum lacus in turpis euismod tempus. Integer a vulputate mauris.
+ Aliquam condimentum tortor quis arcu efficitur, sed pretium mi sagittis. Quisque non neque in libero varius aliquet. Morbi nec elit molestie, faucibus sapien quis, varius ipsum. Duis volutpat commodo interdum. Morbi ac efficitur dui. Aenean tempus justo quis libero elementum vehicula. Suspendisse malesuada ante sed dapibus rhoncus. Proin ullamcorper, diam porttitor egestas elementum, diam elit fermentum nisi, quis maximus ligula ante et diam. Curabitur arcu risus, semper at gravida sit amet, pretium eu lacus. Vestibulum bibendum nec purus sagittis ornare. Sed diam ante, commodo eget tortor ut, bibendum egestas velit. Suspendisse et varius tortor. Nam lacinia interdum ligula id pulvinar. In erat ligula, fringilla non venenatis sed, venenatis id magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam vehicula nec magna et convallis."
+                   BackgroundColor="Black"
+                   TextColor="White" Padding="20"/>
+                <Label  x:Name="SegundaLabel"
+Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis quis mauris quis rutrum. Aenean suscipit erat et nisi ultricies convallis. Nulla orci justo, dignissim quis cursus vitae, venenatis et risus. Sed porta tellus suscipit, malesuada est vel, egestas felis. Aliquam erat volutpat. Pellentesque bibendum mi cursus, maximus nunc vitae, vehicula dolor. Nulla facilisi.
+Suspendisse eleifend justo sem, in malesuada nisl scelerisque id. Donec finibus neque felis, quis tristique ante maximus non. Duis convallis nisi vestibulum fermentum faucibus. Pellentesque ac lectus sit amet felis ultrices ultricies ut a tellus. Nam cursus mattis ipsum eu sodales. Vivamus ultrices sollicitudin purus, sed luctus tellus porta tempus. Phasellus in efficitur est, vitae tincidunt nisi. Proin porttitor gravida felis, vel eleifend ligula maximus at. Nulla id ex fermentum, porta leo nec, pretium arcu. Ut sed accumsan est, ac dapibus ex. In neque dui, lacinia ac neque a, scelerisque blandit massa. Nunc ultricies at dolor vitae consectetur. Pellentesque convallis sed diam nec placerat.
+Proin scelerisque quam a est vestibulum, id feugiat mauris efficitur. Mauris vitae ornare lectus. Aenean id nisl interdum ante elementum sollicitudin sit amet et lectus. Nunc accumsan, dui sed lacinia fermentum, massa orci commodo elit, ac convallis nulla purus non neque. Integer sollicitudin sem mi. Vestibulum rutrum lacus in turpis euismod tempus. Integer a vulputate mauris.
+ Aliquam condimentum tortor quis arcu efficitur, sed pretium mi sagittis. Quisque non neque in libero varius aliquet. Morbi nec elit molestie, faucibus sapien quis, varius ipsum. Duis volutpat commodo interdum. Morbi ac efficitur dui. Aenean tempus justo quis libero elementum vehicula. Suspendisse malesuada ante sed dapibus rhoncus. Proin ullamcorper, diam porttitor egestas elementum, diam elit fermentum nisi, quis maximus ligula ante et diam. Curabitur arcu risus, semper at gravida sit amet, pretium eu lacus. Vestibulum bibendum nec purus sagittis ornare. Sed diam ante, commodo eget tortor ut, bibendum egestas velit. Suspendisse et varius tortor. Nam lacinia interdum ligula id pulvinar. In erat ligula, fringilla non venenatis sed, venenatis id magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam vehicula nec magna et convallis."
+                   BackgroundColor="Black"
+                   TextColor="White" Padding="20"/>
+            </StackLayout>
+        </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

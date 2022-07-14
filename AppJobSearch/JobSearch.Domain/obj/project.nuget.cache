@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "GQh7RD8+VuCZz6eeTXReGzwhbLGwW0g1IfBO9UWWInYiiUDu+jMlOmH+NKNO4SJ+jEr+IDr4FYzDt7hfQYOFew==",
+  "success": true,
+  "projectFilePath": "C:\\Dev\\AppJobSearch\\JobSearch.Domain\\JobSearch.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\luanne.ferreira\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\luanne.ferreira\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

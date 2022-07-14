@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Raposa" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Concha.MenuHamburguer.Paginas.Raposa">
+    <Shell.TitleView>
+        <Label Text="Alteramos a titleview" VerticalTextAlignment="Center" TextColor="White"/>
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Raposa!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button Clicked="Button_Clicked" Text="Abrir página do coala"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

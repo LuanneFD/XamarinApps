@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controles.CampoDeEntradaSimplesControle.CampoDeEntradaSimples"
+             Padding="10">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Label Text="Text, TextColor"/>
+            <Entry Text="Texto simples" TextColor="Blue"/>
+
+            <Label Text="Placeholder, PlaceholderColor"/>
+            <Entry Placeholder="Digite o seu nome" PlaceholderColor="LightBlue"/>
+
+            <Label Text="MaxLength, BackgroundColor"/>
+            <Entry MaxLength="10" BackgroundColor="LightBlue"/>
+
+            <Label Text="IsReadOnly, IsPassword "/>
+            <Entry Text="123456" IsReadOnly="True" IsPassword="True"/>
+
+            <Label Text="ClearButtonVisibility"/>
+            <Entry ClearButtonVisibility="WhileEditing"/>
+
+            <Label Text="FontFamily, FontAttributes, FontSize"/>
+            <Entry FontFamily="sans-serif-thin" FontAttributes="Italic" FontSize="32"/>
+
+            <Label Text="CharacterSpacing"/>
+            <Entry CharacterSpacing="5"/>
+
+            <Label Text="CursorPosition, SelectionLength"/>
+            <Entry Text="Exemplo de texto teste" CursorPosition="8" SelectionLength="2"/>
+
+            <Label Text="IsSpellCheckEnabled, IsTextPredictionEnabled"/> <!--correção ortográfica-->
+            <Entry IsSpellCheckEnabled="True" IsTextPredictionEnabled="True"/>
+
+                <Label Text="Keyboard, ReturnType"/>
+                <Entry Keyboard="Email" ReturnType="Send"/>
+
+                <Label Text="KeyboardFlags"/>
+                <Entry Placeholder="Enter text here">
+                    <Entry.Keyboard>
+                        <Keyboard x:FactoryMethod="Create">
+                            <x:Arguments>
+                                <KeyboardFlags>Suggestions,CapitalizeCharacter</KeyboardFlags>
+                            </x:Arguments>
+                        </Keyboard>
+                    </Entry.Keyboard>
+                </Entry>
+
+                <Label Text="Focused, Unfocused, TextChanged, Completed"/>
+              <Entry ReturnType="Done" Focused="Entry_Focused" Unfocused="Entry_Unfocused" TextChanged="Entry_TextChanged" Completed="Entry_Completed"/>
+                <Label x:Name="focus" Text="-"/>
+                <Label x:Name="unfocus" Text="-"/>
+                <Label x:Name="textchange" Text="-"/>
+                <Label x:Name="complete" Text="-"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

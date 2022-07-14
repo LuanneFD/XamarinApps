@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell FlyoutHeaderBehavior="CollapseOnScroll" FlyoutIcon="menu" FlyoutBackdrop="#95FF0000"
+       xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Concha.MenuHamburguer.AppShellFlyOutItem"
+       xmlns:paginas="clr-namespace:AppGallery.XamarinForms.Concha.MenuHamburguer.Paginas">
+    <!--FlyoutBackgroundColor="#707070" colocar cor de fundo-->
+    <!--FlyoutBackgroundImage="background" Colocar imagem de fundo
+       FlyoutBackgroundImageAspect="Fill" aspecto da imagem de fundo--> 
+
+    <!--<Shell.ItemTemplate>  Customizar aparencia do menu
+        <DataTemplate>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Title}" HorizontalOptions="Start" Margin="10"/>
+                <Image Source="{Binding FlyoutIcon}" HeightRequest="30" Margin="10" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.ItemTemplate>-->
+    
+    <!--<Shell.MenuItemTemplate> Customizar aparencia do menu item sair
+        <DataTemplate>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Title}" HorizontalOptions="Start" Margin="10"/>
+                <Image Source="{Binding Icon}" HeightRequest="30" Margin="10" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>-->
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="FlyoutBaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="MediumAquamarine"/>
+                <Setter Property="Shell.ForegroundColor" Value="Aquamarine"/>
+                <Setter Property="Shell.UnselectedColor" Value="Gray"/>
+                <Setter Property="Shell.TitleColor" Value="Black"/>
+            </Style>
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource FlyoutBaseStyle}"/>
+
+
+        </ResourceDictionary>
+    </Shell.Resources>    
+    <Shell.FlyoutBackground>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#83a4d4" Offset="0.1"/>
+            <GradientStop Color="#b6fbff" Offset="1"/>
+        </LinearGradientBrush>
+    </Shell.FlyoutBackground>
+    <Shell.FlyoutHeader>
+        <ContentView>
+            <Image Source="https://todateen.com.br/wp-content/uploads/2019/07/simba-rei-leao.jpg"/>
+        </ContentView>
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="Exóticos" Icon="lion" Route="exoticos">
+        <Tab Title="Pequenos" Icon="fox" Route="pequenos">
+            <ShellContent Title="Raposa" Route="raposa" Icon="fox" ContentTemplate="{DataTemplate paginas:Raposa}"/>
+            <ShellContent Title="Coala" Route="coala" Icon="koala" ContentTemplate="{DataTemplate paginas:Coala}"/>
+        </Tab>
+        <ShellContent Title="Leão" Route="leao" Icon="lion" ContentTemplate="{DataTemplate paginas:Leao}"/>
+    </FlyoutItem>
+
+    <ShellContent Title="Tartaruga" Icon="turtle" ContentTemplate="{DataTemplate paginas:Tartaruga}"/>
+
+    <FlyoutItem Title="Todos" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Raposa" Icon="fox" ContentTemplate="{DataTemplate paginas:Raposa}"/>
+        <ShellContent Title="Coala" Icon="koala" ContentTemplate="{DataTemplate paginas:Coala}"/>
+        <ShellContent Title="Leão" Icon="lion" ContentTemplate="{DataTemplate paginas:Leao}"/>
+        <ShellContent Title="Tartaruga" Icon="turtle" ContentTemplate="{DataTemplate paginas:Tartaruga}"/>
+    </FlyoutItem>
+
+    <MenuItem Text="Sair" IconImageSource="logout" Clicked="MenuItem_Clicked"/>
+</Shell>

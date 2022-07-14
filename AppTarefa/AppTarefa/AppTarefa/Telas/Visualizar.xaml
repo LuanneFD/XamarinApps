@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTarefa.Telas.Visualizar"
+             BackgroundColor="#F5F6FA"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:conversor="clr-namespace:AppTarefa.Conversor">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <conversor:PrioridadeConversor x:Key="Prioridade" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="5*"/>
+                <!--Linha 6 vezes maior do que a primeira-->
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" BackgroundColor="Transparent" ColumnSpacing="0" TranslationY="30">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Margin="10,0,10,30" Padding="20,20,0,0">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Voltar"/>
+                    </StackLayout.GestureRecognizers>
+                    <Image Source="back.png"/>
+                </StackLayout>
+                <Label Text="{Binding Nome}" 
+                       Grid.Column="1"
+                       Style="{StaticResource Label}"
+                       Margin="0,20,0,0"/>
+            </Grid>
+
+            <Frame Grid.Row="1" 
+                   HasShadow="false" 
+                   TranslationY="30" 
+                   CornerRadius="30" 
+                   BackgroundColor="White">
+
+                <StackLayout>
+                    <Label Text="{Binding Data,StringFormat='{0:dd/MM/yyyy}'}" FontFamily="MontserratRegular" FontSize="16" TextColor="Black"/>
+                    <Label FontFamily="MontserratRegular" FontSize="16" TextColor="#939393">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding HorarioInicial, StringFormat=\{0:hh\\:mm\}}"/>
+                                <Span Text=" - "/>
+                                <Span Text="{Binding HoraFinal, StringFormat=\{0:hh\\:mm\}}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label x:Name="lblNota" Text="Nota" Style="{StaticResource Label}"/>
+                    <Label Text="{Binding Nota}" 
+                           FontFamily="MontserratRegular" FontSize="14" TextColor="Black"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Ellipse WidthRequest="15" HeightRequest="15" VerticalOptions="Center" Fill="{Binding Prioridade, Converter={StaticResource Prioridade}}"/>
+                        <Label Text="{Binding Prioridade}" FontFamily="MontserratRegular" FontSize="14" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Layouts.ControleLayout.Controle"
+                          xmlns:controle="clr-namespace:AppGallery.XamarinForms.Layouts.ControleLayout">
+    <ContentPage.Content>
+        <StackLayout>
+            <controle:CardHorizontal Titulo="Notícia 01" Texto="Texto 01" Cor="Gray"/>
+            <controle:CardHorizontal Titulo="Notícia 02" Texto="Texto 02" Cor="Gray"/>
+            <controle:CardHorizontal Titulo="Notícia 03" Texto="Texto 03" Cor="#202020"/>
+            <controle:CardDiretor Nome="Steven Spielberg" 
+                                  Descricao="Cineasta, produtor cinematográfico, roteirista e empresário norte-americano" 
+                                  BoxViewColor="Blue"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

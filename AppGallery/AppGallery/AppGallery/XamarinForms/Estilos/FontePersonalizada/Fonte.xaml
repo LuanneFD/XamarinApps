@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Estilos.FontePersonalizada.Fonte">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Fontes Personalizadas"
+                VerticalOptions="Start" FontSize="14" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="Fonte - Nunito Black" FontFamily="NunitoBlack"/>
+            <Label Text="Fonte - Nunito Bold" FontFamily="NunitoBold"/>
+            <Label Text="Fonte - Nunito Light" FontFamily="NunitoLight"/>
+            <Label Text="Fonte - Font Awesome" FontFamily="FontAwesome"/>
+            <Label Text="&#xf270;" FontSize="48" FontFamily="FontAwesome" TextColor="Orange" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="&#xf368;" FontSize="84" FontFamily="FontAwesome" TextColor="Purple" HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    
+<!--Para usar fonte personalizada é necessário adiciona-las ao projeto e:
+Propriedade das fontes - build action: Embedded resource
+Informar todas elas no assembly info
+    
+Para exibir um ícone FontAwesome coloca no text &#x codigo do icone ;
+-->

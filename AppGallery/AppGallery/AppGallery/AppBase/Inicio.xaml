@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.AppBase.Inicio"
+             xmlns:viewmodel="clr-namespace:AppGallery.AppBase.ViewModel">
+    <ContentPage.BindingContext>
+        <viewmodel:InicioViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+
+            <Entry x:Name="entrySearch" Placeholder="Pesquisar" Grid.Row="0" Grid.Column="0" Style="{DynamicResource SearchEntry}"/>
+            <Button Clicked="Buscar" Text="OK" Grid.Row="0" Grid.Column="1" Style="{DynamicResource SearchButton}"/>
+
+            <CollectionView ItemsSource="{Binding PageList}" ItemTemplate="{StaticResource PageListDataTemplate}" 
+                            Grid.Row="1" Grid.ColumnSpan="2"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

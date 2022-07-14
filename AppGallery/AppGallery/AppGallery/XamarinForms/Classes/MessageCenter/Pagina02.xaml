@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Classes.MessageCenter.Pagina02">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Message Center"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry Placeholder="Digite o nome" x:Name="txtnome"/>
+            <Button Text="Salvar" Clicked="salvar"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

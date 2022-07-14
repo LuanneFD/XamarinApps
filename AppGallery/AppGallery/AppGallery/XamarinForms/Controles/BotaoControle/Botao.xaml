@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controles.BotaoControle.Botao">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="TextColor, BackgroundColor, CornerRadius"/>
+            <Button Text="Botão 01" TextColor="White" BackgroundColor="Black" CornerRadius="30"/>
+            
+            <Label Text="BorderWidth, BorderColor"/>
+            <Button Text="Botão 02" BackgroundColor="White" BorderWidth="3" BorderColor="Black" CornerRadius="30"/>
+            
+            <Label Text="FontFamily, FontSize, FontAttributes"/>
+            <Button Text="Botão 03" FontFamily="sans-serif-light" FontSize="Title" FontAttributes="Italic" 
+                    BackgroundColor="Black" TextColor="White" Padding="30,10" CornerRadius="60" HorizontalOptions="Center"/>
+
+            <Label Text="VisualStateManager"/>
+            <Button Text="Botão 04" Pressed="Pressionado" Released="Liberado" Clicked="Clicado">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="White"></Setter>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Gray"></Setter>
+                                <Setter Property="BorderColor" Value="Black"></Setter>
+                                <Setter Property="BorderWidth" Value="2"></Setter>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
+
+            <Label Text="Eventos: Pressed, Released, Clicked"/>
+            <Button Text="Botão 05" Pressed="Pressionado" Released="Liberado" Clicked="Clicado"/>
+            <Label x:Name="LblPressionado" Text="-"/>
+            <Label x:Name="LblLiberado" Text="-"/>
+            <Label x:Name="LblClicado" Text="-"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

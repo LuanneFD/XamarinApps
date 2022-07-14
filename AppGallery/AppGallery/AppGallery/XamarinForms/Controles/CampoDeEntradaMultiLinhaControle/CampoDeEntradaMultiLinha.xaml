@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controles.CampoDeEntradaMultiLinhaControle.CampoDeEntradaMultiLinha">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Text, TextColor"/>
+                <Editor Text="Texto simples" TextColor="Blue"/>
+
+                <Label Text="Placeholder, PlaceholderColor"/>
+                <Editor Placeholder="Digite o seu nome" PlaceholderColor="LightBlue"/>
+
+                <Label Text="MaxLength, BackgroundColor"/>
+                <Editor MaxLength="10" BackgroundColor="LightBlue"/>
+
+                <Label Text="IsReadOnly"/>
+                <Editor Text="123456" IsReadOnly="True"/>
+                
+                <Label Text="FontFamily, FontAttributes, FontSize"/>
+                <Editor FontFamily="sans-serif-thin" FontAttributes="Italic" FontSize="32"/>
+
+                <Label Text="CharacterSpacing"/>
+                <Editor CharacterSpacing="5"/>
+
+                <Label Text="IsSpellCheckEnabled, IsTextPredictionEnabled"/>
+                <!--correção ortográfica-->
+                <Editor IsSpellCheckEnabled="True" IsTextPredictionEnabled="True"/>
+
+                <Label Text="Keyboard, ReturnType"/>
+                <Editor Keyboard="Email"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

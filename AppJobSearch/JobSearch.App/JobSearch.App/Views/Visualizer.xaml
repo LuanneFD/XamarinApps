@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JobSearch.App.Views.Visualizer">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="20">
+                <ImageButton Clicked="Voltar" Style="{StaticResource ButtonBack}"/>
+                <Label Text="JobSearch" Style="{StaticResource Title}" HorizontalOptions="Center" TranslationY="4"/>
+            </StackLayout>
+            <BoxView BackgroundColor="#D7CCFF" HeightRequest="1"/>
+
+            <ScrollView>
+                <StackLayout>
+                    <Grid RowDefinitions="6" RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Digital Ocean" Grid.Row="1" Grid.Column="0" Style="{StaticResource TextSecundary}"/>
+                        <Label Text="Pub. 08/02/2020" Grid.Row="1" Grid.Column="1" Style="{StaticResource TextPrimary}"/>
+                        <Label Text="Back-End Developer" Grid.Row="2" Grid.Column="0" Style="{StaticResource TextPrimary}"/>
+                        <Label Grid.Row="2" Grid.Column="1" Style="{StaticResource IdLabel}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="id. " />
+                                    <Span Text="78123" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Text="São Paulo,SP" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource TextSecundary}"/>
+                        <Label Grid.Row="4" Grid.ColumnSpan="2">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="7.0-11k " Style="{StaticResource MoneyLabel}"/>
+                                    <Span Text="BRL" Style="{StaticResource CurrencyLabel}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Text="CLT" Grid.Row="5" Grid.ColumnSpan="2" Style="{StaticResource TextPrimary}"/>
+                        <Label Text="TAGS" Grid.Row="6" Grid.ColumnSpan="2"/>
+                    </Grid>
+
+                    <Label Text="Interessados enviar e-mail para:" Style="{StaticResource TextPrimary}"/>
+                    <Label Text="job@digitalocean.com.br" Style="{StaticResource TextSecundary}"/>
+
+                    <BoxView BackgroundColor="#D7CCFF" HeightRequest="1"/>
+
+                    <Label Text="Descrição da empresa" Style="{StaticResource TitlePrimary}"/>
+                    <Label Text="Descrição da empresaDescriçãofergrbubueygureyburbguerbgyebguebehybgueybgvergu" Style="{StaticResource TextPrimary}"/>
+
+                    <Label Text="Descrição do trabalho" Style="{StaticResource TitlePrimary}"/>
+                    <Label Text="Descrição do trabalhoDescrição do trabalhoDescrição do trabalho" Style="{StaticResource TextPrimary}"/>
+
+                    <Label Text="Benefícios" Style="{StaticResource TitlePrimary}"/>
+                    <Label Text="Vale transporte" Style="{StaticResource TextPrimary}"/>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

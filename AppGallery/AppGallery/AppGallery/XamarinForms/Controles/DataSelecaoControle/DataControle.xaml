@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controles.DataSelecaoControle.DataControle" Padding="10">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Date, MinimumDate, MaximumDate"/>
+            <DatePicker Date="07/26/2021" MinimumDate="07/01/2021" MaximumDate="07/31/2021"></DatePicker>
+
+            <Label Text="Format"/>
+            <DatePicker Format="dd/MM/yyyy" TextColor="ForestGreen"></DatePicker>
+
+            <Label Text="Eventos"/>
+            <DatePicker Format="dd/MM/yyyy" DateSelected="DatePicker_DateSelected"></DatePicker>
+            <Label x:Name="lblinfo"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

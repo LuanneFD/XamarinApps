@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTarefa.Telas.Cadastrar">
+    <ContentPage.Content>
+        <ScrollView>
+            <Frame BackgroundColor="#C0C2CD" CornerRadius="10" Margin="30" HasShadow="True">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
+                        <Label HorizontalOptions="FillAndExpand">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Criar" FontFamily="MontserratRegular" FontSize="16" TextColor="Black"/>
+                                    <Span Text="&#10;"/>
+                                    <Span Text="Tarefa" FontFamily="MontserratBold" FontSize="22" TextColor="Black"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Label Text="X" Padding="20,0,0,20" 
+                           HorizontalOptions="End" 
+                           VerticalOptions="Start" 
+                           FontFamily="MontserratRegular"
+                           TextColor="Black"
+                           FontSize="20">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="FecharModal"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+
+                    <Frame  Padding="0" CornerRadius="0" BorderColor="#EDEDED">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="DataTapped"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Horizontal" Padding="15">
+                            <DatePicker x:Name="Data" IsVisible="false" Unfocused="Data_Unfocused"/>
+                            <Label Text="Data" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Style="{StaticResource TituloCampo}"/>
+                            <Label x:Name="dataselecionada" Style="{StaticResource DataHora}"/>
+                            <Image Source="calendar.png"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Padding="0" CornerRadius="0" BorderColor="#EDEDED">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="HoraTapped"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Horizontal" Padding="15">
+                            <TimePicker x:Name="HoraInicial" IsVisible="false" Unfocused="HoraInicial_Unfocused"/>
+                            <TimePicker x:Name="HoraFinal" IsVisible="false" Unfocused="HoraFinal_Unfocused"/>
+                            <Label Text="Horário" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Style="{StaticResource TituloCampo}"/>
+                            <Label Style="{StaticResource DataHora}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span x:Name="spanHoraInicial" Text="Início"/>
+                                        <Span Text=" - "/>
+                                        <Span x:Name="spanHoraFinal" Text="Fim"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Visual="Material" Padding="0" CornerRadius="0" BorderColor="#EDEDED">
+                        <Entry Visual="Material" Placeholder="Tarefa" x:Name="Nome" Style="{StaticResource CampoEntradaEntry}"/>
+                    </Frame>
+
+                    <Frame Visual="Material" Padding="0" CornerRadius="0" BorderColor="#EDEDED">
+                        <Editor Visual="Material" Placeholder="Nota"  x:Name="Nota" Style="{StaticResource CampoEntradaEditor}"/>
+                    </Frame>
+
+                    <Grid ColumnDefinitions="*,*,*">
+                        <RadioButton x:Name="rbBaixa" FontFamily="MontserratRegular" FontSize="13" CheckedChanged="rbPrioridade_CheckedChanged" GroupName="Prioridade" Content="Baixa" Grid.Column="0" TextColor="{StaticResource PrioridadeBaixa}"/>
+                        <RadioButton x:Name="rbNormal" FontFamily="MontserratRegular" FontSize="13" CheckedChanged="rbPrioridade_CheckedChanged" GroupName="Prioridade" Content="Normal" Grid.Column="1" TextColor="{StaticResource PrioridadeNormal}"/>
+                        <RadioButton x:Name="rbAlta" FontFamily="MontserratRegular" FontSize="13" CheckedChanged="rbPrioridade_CheckedChanged" GroupName="Prioridade" Content="Alta" Grid.Column="2" TextColor="{StaticResource PrioridadeAlta}"/>
+                    </Grid>
+                    <Button Text="Adicionar" Clicked="SalvarTarefa" Style="{StaticResource BotaoAdicionar}"/>
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

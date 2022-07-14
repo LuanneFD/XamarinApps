@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controles.Shapes.Shape"
+             Title="Shapes (Formas)">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="20" Padding="10">
+                
+                <Label Text="Shapes - Rectangle, Ellipse, Line, Polygon, Polyline"
+                VerticalOptions="Start" 
+                       FontSize="14" FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand" Margin="0,0,0,10"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Ellipse
+                        Aspect="UniformToFill"
+                        HorizontalOptions="StartAndExpand"
+                        WidthRequest="150"
+                        HeightRequest="100"
+                        Stroke="blue" 
+                        Fill="gray" 
+                        StrokeThickness="10"
+                        StrokeDashArray="3,3"
+                        StrokeLineCap="Round"
+                        />
+                    
+                    <Rectangle StrokeThickness="20" 
+                               StrokeLineJoin="Miter"
+                               StrokeMiterLimit="0"
+                               HorizontalOptions="EndAndExpand" 
+                               Stroke="blue" 
+                               Fill="gray" 
+                               WidthRequest="75" 
+                               HeightRequest="50"/>
+                </StackLayout>
+                
+                <Label Text="Rectangle" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Rectangle WidthRequest="75" 
+                       HeightRequest="50"
+                       Stroke="blue"
+                       HorizontalOptions="Center"
+                       Fill="gray"/>
+
+                <Label Text="Ellipse" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Ellipse   Stroke="blue"
+                       HeightRequest="50"
+                        WidthRequest="50"
+                       HorizontalOptions="Center"
+                       Fill="gray"/>
+
+                <Label Text="Line" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Line X1="0"
+                  Y1="50"
+                  
+                  X2="50"
+                  Y2="0"
+                Stroke="blue"
+                       HeightRequest="50"
+                       WidthRequest="50"
+                       HorizontalOptions="Center"/>
+
+                <Label Text="Polyline" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Polyline 
+                   Points="0,50 30,50 40,20 50,30 60,00 70,50 90,50"
+                    Margin="10"
+                    Stroke="blue"
+                    StrokeThickness="3"
+                    HorizontalOptions="Center"/>
+
+                <Label Text="Polygon" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Polygon  
+                    Margin="20"
+                    Stroke="blue"
+                    Points="0,0 0,50 50,25"
+                    StrokeThickness="2"
+                    Fill="gray"
+                    HorizontalOptions="Center"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

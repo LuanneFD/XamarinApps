@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Listas.ListView.Lista" Padding="10">
+    <ContentPage.Content>
+        <ListView x:Name="Lista01" 
+                  CachingStrategy="RecycleElement"
+                  SelectionMode="Single" 
+                  ItemSelected="Lista01_ItemSelected"
+                  ItemTapped="Lista01_ItemTapped"
+                  Scrolled="Lista01_Scrolled" 
+                  IsPullToRefreshEnabled="True" 
+                  RefreshControlColor="Green" 
+                  Refreshing="Lista01_Refreshing" 
+                  IsGroupingEnabled="True" 
+                  SeparatorVisibility="Default" 
+                  Footer="Rodapé" 
+                  SeparatorColor="ForestGreen"
+                  HasUnevenRows="True">
+            <!--<ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Mobi</x:String>
+                        <x:String>Uno</x:String>
+                        <x:String>Argo</x:String>
+                        <x:String>Cronos</x:String>
+                        <x:String>Toro</x:String>
+                        <x:String>Grand Siena</x:String>
+                        <x:String>Strada</x:String>
+                        <x:String>Dublò</x:String>
+                    </x:Array>
+                </ListView.ItemsSource>-->
+
+            <!--Prop CachingStrategy recurso para manter a lista performática
+            
+            RetainElement: o layout é instanciado e os dados vinculados. 
+            Indicado quando se tem muitos campos e muitos dados e layouts diferentes por linha .
+            
+            RecycleElement: guarda um cache do layout, economia de memória. 
+            Indicado quando se tem poucos campos e poucos dados e quando o layout das linhas é igual.
+            
+            RecycleElementAndDataTemplate: Indicado para poucos layouts e muitos registros.
+            -->
+            
+            <ListView.Header>
+                <StackLayout>
+                    <Label Text="ListView" HorizontalTextAlignment="Center" FontSize="15" CharacterSpacing="1"/>
+                    
+                    <Label Text="Prop: ItemsSource, ItemTemplate, SeparatorVisibility true ou false, 
+                           SeparatorColor, RowHeight, HasUnevenRows a linha tem o tamanho que precisa 
+                           para mostrar os itens"/>
+                    
+                    <Label Text="IsPullToRefreshEnabled/RefreshControlColor/Refreshing: 
+                           deslizar a tela pra baixo e atualizar a lista, nativo do listview/ 
+                           cor pode ser trocada/Refreshing método disparado ao deslizar"/>
+
+                    <Label Text="Scrolled: evento acionado quando desliza o scroll"/>
+                    <Label Text="SelectionMode: none desabilita o clique em item da lista"/>
+                    
+                    <Label Text="Eventos" HorizontalTextAlignment="Center" FontSize="15" CharacterSpacing="1"/>
+                    <Label x:Name="refresh" Text="-" TextColor="Red" FontAttributes="Bold" />
+                    <Label x:Name="scrolled" Text="-" TextColor="Red" FontAttributes="Bold" />
+                    
+                    <Button Text="Clique para ir na marca FORD" Clicked="Button_Clicked"/>
+                    <Label Text="Agrupamento na lista e personalização"/>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding Nome}" BackgroundColor="LightGray" TextColor="Green" FontAttributes="Bold" FontSize="14" Padding="17,20" HorizontalTextAlignment="Center"/>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Visualizar" 
+                                      Clicked="MenuItem_Clicked" 
+                                      CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Nome}" FontAttributes="Bold" FontSize="16"/>
+                            <Label Text="{Binding Motor}" FontAttributes="Italic"/>
+                            <Label Text="{Binding Descricao}" FontAttributes="Italic"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

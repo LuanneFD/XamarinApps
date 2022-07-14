@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controles.Paths.Path"
+             Title="Paths">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Label Text="Paths (Caminhos) - Desenho livre"
+                VerticalOptions="Start" FontSize="20" FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="No adobeXD ou nas imagens vetoriais é possível copiar propriedade path e o seu data" FontSize="14" TextColor="Black"/>
+
+                <Grid>
+                    <Path
+                HorizontalOptions="CenterAndExpand"
+                StrokeThickness="0"
+                Fill="#FF656F"
+                Data="M251,0 C266.463973,-2.84068575e-15 279,12.536027 279,28 L279,276 C279,291.463973 266.463973,304 251,304 L214.607,304 L214.629319,304.009394 L202.570739,304.356889 C196.091582,304.5436 190.154631,308.020457 186.821897,313.579883 L186.821897,313.579883 L183.402481,319.283905 C177.100406,337.175023 160.04792,350 140,350 C119.890172,350 102.794306,337.095694 96.5412691,319.115947 L96.5273695,319.126964 L92.8752676,313.28194 C89.5084023,307.893423 83.6708508,304.544546 77.3197008,304.358047 L65.133,304 L28,304 C12.536027,304 1.8937905e-15,291.463973 0,276 L0,28 C-1.8937905e-15,12.536027 12.536027,2.84068575e-15 28,0 L251,0 Z"
+             >
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="0.9" ScaleY="0.9"/>
+                                <TranslateTransform Y="-15"/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+
+                    <Path
+                 HorizontalOptions="CenterAndExpand"
+                StrokeThickness="0"
+                Fill="#57D95F"
+                Data="M251,0 C266.463973,-2.84068575e-15 279,12.536027 279,28 L279,276 C279,291.463973 266.463973,304 251,304 L214.607,304 L214.629319,304.009394 L202.570739,304.356889 C196.091582,304.5436 190.154631,308.020457 186.821897,313.579883 L186.821897,313.579883 L183.402481,319.283905 C177.100406,337.175023 160.04792,350 140,350 C119.890172,350 102.794306,337.095694 96.5412691,319.115947 L96.5273695,319.126964 L92.8752676,313.28194 C89.5084023,307.893423 83.6708508,304.544546 77.3197008,304.358047 L65.133,304 L28,304 C12.536027,304 1.8937905e-15,291.463973 0,276 L0,28 C-1.8937905e-15,12.536027 12.536027,2.84068575e-15 28,0 L251,0 Z"
+             >
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <SkewTransform AngleX="15"/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+
+                    <Path
+                 HorizontalOptions="CenterAndExpand"
+                StrokeThickness="0"
+                Fill="#8BAEFF"
+                Data="M251,0 C266.463973,-2.84068575e-15 279,12.536027 279,28 L279,276 C279,291.463973 266.463973,304 251,304 L214.607,304 L214.629319,304.009394 L202.570739,304.356889 C196.091582,304.5436 190.154631,308.020457 186.821897,313.579883 L186.821897,313.579883 L183.402481,319.283905 C177.100406,337.175023 160.04792,350 140,350 C119.890172,350 102.794306,337.095694 96.5412691,319.115947 L96.5273695,319.126964 L92.8752676,313.28194 C89.5084023,307.893423 83.6708508,304.544546 77.3197008,304.358047 L65.133,304 L28,304 C12.536027,304 1.8937905e-15,291.463973 0,276 L0,28 C-1.8937905e-15,12.536027 12.536027,2.84068575e-15 28,0 L251,0 Z"
+             >
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                            <TranslateTransform X="150" Y="20"/>
+                            <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+
+                </Grid>
+
+                <Path
+                 
+                 HorizontalOptions="CenterAndExpand"
+                StrokeThickness="0"
+                Fill="#FF656F">
+                    <Path.Data>
+                        <GeometryGroup>
+                            <EllipseGeometry RadiusX="45" RadiusY="25" Center="80,30"/>
+                            <EllipseGeometry RadiusX="45" RadiusY="25" Center="50,30"/>
+                        </GeometryGroup>
+                    </Path.Data>
+                </Path>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

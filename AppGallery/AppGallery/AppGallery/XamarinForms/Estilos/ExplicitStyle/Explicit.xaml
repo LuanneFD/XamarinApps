@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Estilos.ExplicitStyle.Explicit" Padding="10">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BotaoEstilo" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Accent"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- A prioridade de aplicação fica nessa ordem: 
+            1-Mais prioritário: style definido diretamente no componente. Ex: <Button BackgroundColor="white"/>
+            2-Medio: style definito no componente pai que engloba os componentes. Ex: <StackLayout BackgroundColor="white"> <Button>
+            3-Baixo: style definido no nível acima. Ex: style colocado no ContentPage
+            4-Extrabaixo: style global
+            para aplicação do style é verificado todos esses níveis
+            -->
+            <Label Text="ExplicitStyle" FontSize="14" FontAttributes="Bold" TextColor="Black"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="VANTAGEM: Padronização nos 3 tipos de SO, Reutilização"/>
+            <Button Text="Botão" Style="{StaticResource BotaoEstilo}"/>
+            <Button Text="Botão" Style="{StaticResource BotaoEstilo}"/>
+            <Button Text="Botão" Style="{StaticResource BotaoEstilo}"/>
+            <Button Text="Style prioritário" BackgroundColor="Black" Style="{StaticResource BotaoEstilo}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

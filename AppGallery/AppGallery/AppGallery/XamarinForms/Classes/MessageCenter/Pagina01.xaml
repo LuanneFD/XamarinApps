@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Classes.MessageCenter.Pagina01">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Message Center"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button Text="Adicionar" Clicked="cadastrar"/>
+            <ListView x:Name="lista01">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Nome}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    <!--Forma mais simples e mais 'elegante' de realizar a troca de informações entre páginas.
+    Ao invés de ficar instanciando um objeto e passando de página em página, 
+    utilizamos um facilitador de assinante/notificação e publicação chamado MESSAGE CENTER-->

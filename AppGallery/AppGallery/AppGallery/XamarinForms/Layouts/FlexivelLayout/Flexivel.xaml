@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Layouts.FlexivelLayout.Flexivel">
+    <ContentPage.Content>
+        <FlexLayout Direction="Column">
+            <FlexLayout BackgroundColor="HotPink" FlexLayout.Grow="1" Direction="Column" AlignItems="Stretch" JustifyContent="Start">
+            <Label Text="Linha 01" FlexLayout.AlignSelf="Center" BackgroundColor="Black" TextColor="White" Padding="10"/>
+            <Label Text="Linha 02" FlexLayout.Basis="30%"  BackgroundColor="Black" TextColor="White" Padding="10"/>
+            <Label Text="Linha 03" BackgroundColor="Black" TextColor="White" Padding="10"/>
+        </FlexLayout>
+            <FlexLayout BackgroundColor="LightSkyBlue" Direction="Row" FlexLayout.Grow="1" AlignItems="Start" Wrap="Wrap">
+                <Label Text="Coluna 01 dfgdfhdhdhdrhegsdgsg" FlexLayout.Shrink="0" BackgroundColor="Black" TextColor="White" Padding="10"/>
+                <Label Text="Coluna 02"  BackgroundColor="Black" TextColor="White" Padding="10"/>
+                <Label Text="Coluna 03"  BackgroundColor="Black" TextColor="White" Padding="10"/>
+                <Label Text="Coluna 04"  BackgroundColor="Black" TextColor="White" Padding="10"/>
+                <Label Text="Coluna 05"  BackgroundColor="Black" TextColor="White" Padding="10"/>
+            </FlexLayout>
+            <FlexLayout BackgroundColor="Lime" Direction="Row" FlexLayout.Grow="1" AlignContent="Start" AlignItems="Start" 
+                        Wrap="Wrap">
+                <BoxView BackgroundColor="Black" Margin="1"></BoxView>
+                <BoxView BackgroundColor="Black" Margin="1"></BoxView>
+                <BoxView BackgroundColor="Black" Margin="1"></BoxView>
+                <BoxView BackgroundColor="Black" Margin="1"></BoxView>
+                <BoxView BackgroundColor="Black" Margin="1"></BoxView>
+                <BoxView BackgroundColor="Black" Margin="1"></BoxView>
+                <BoxView BackgroundColor="Black" Margin="1"></BoxView>
+                <BoxView BackgroundColor="Black" Margin="1"></BoxView>
+                <BoxView BackgroundColor="Black" Margin="1"></BoxView>
+                <BoxView BackgroundColor="Black" Margin="1"></BoxView>
+                <BoxView BackgroundColor="Black" Margin="1"></BoxView>
+                <BoxView BackgroundColor="Black" Margin="1"></BoxView>
+            </FlexLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

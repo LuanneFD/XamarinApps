@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Classes.Alertas.Alerta">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Alertas"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button Text="Display Alert" Clicked="displayalert"/>
+            <Button Text="Display Action Sheet" Clicked="displayactionsheet"/>
+            <Button Text="Display Prompt" Clicked="displayprompt"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

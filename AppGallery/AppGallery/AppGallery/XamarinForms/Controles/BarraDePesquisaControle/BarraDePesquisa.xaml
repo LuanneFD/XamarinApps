@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controles.BarraDePesquisaControle.BarraDePesquisa" Padding="10">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Dica: Todos as propriedades de texto podem ser alteradas" />
+            
+            <Label Text="Placeholder, PlaceholderColor"/>
+            <SearchBar Placeholder="Digite.." PlaceholderColor="LightBlue" />
+
+            <Label Text="CancelButtonColor"/>
+            <SearchBar CancelButtonColor="Green"/>
+
+            <Label Text="Eventos: TextChanged, SearchButtonPressed"/>
+            <SearchBar TextChanged="SearchBar_TextChanged" SearchButtonPressed="SearchBar_SearchButtonPressed"/>
+            <Label x:Name="lblTextChanged" Text="-"/>
+            <Label x:Name="lblSearchButtonPressed" Text="-"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

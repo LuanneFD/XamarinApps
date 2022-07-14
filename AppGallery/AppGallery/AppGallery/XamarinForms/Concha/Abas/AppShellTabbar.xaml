@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Concha.Abas.AppShellTabbar"
+             xmlns:paginas="clr-namespace:AppGallery.XamarinForms.Concha.Paginas"
+       Shell.NavBarIsVisible="true">
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="TabBarBaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="LightGray"/>
+                <Setter Property="Shell.TitleColor" Value="Black"/>
+                <Setter Property="Shell.ForegroundColor" Value="Black"/>
+                <Setter Property="Shell.UnselectedColor" Value="Gray"/>
+                <Setter Property="Shell.TabBarBackgroundColor" Value="AliceBlue"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="CornflowerBlue"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="CadetBlue"/>
+            </Style>
+                <Style TargetType="TabBar" BasedOn="{StaticResource TabBarBaseStyle}">
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+    <TabBar>
+        <ShellContent Title="Raposa" Icon="fox" ContentTemplate="{DataTemplate paginas:cachorro}"/>
+        <ShellContent Title="Leão" Icon="lion" ContentTemplate="{DataTemplate paginas:leao}"/>
+
+        <Tab Title="Exóticos" Icon="koala">
+            <ShellContent Title="Coala" Icon="koala" ContentTemplate="{DataTemplate paginas:coala}"/>
+            <ShellContent Title="Tartaruga" Icon="turtle" ContentTemplate="{DataTemplate paginas:tartaruga}"/>
+        </Tab>
+
+    </TabBar>
+</Shell>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Listas.IndicatorView.Indicator">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="IndicatorView"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <CarouselView PeekAreaInsets="40" IndicatorView="IndicadorControle">
+                <CarouselView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>FIAT UNO</x:String>
+                        <x:String>FIAT MOBI</x:String>
+                        <x:String>FIAT ARGO</x:String>
+                        <x:String>FORD KA</x:String>
+                        <x:String>FORD FUSION</x:String>
+                        <x:String>FORD ECOSPORT</x:String>
+                    </x:Array>
+                </CarouselView.ItemsSource>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <Frame BorderColor="Gray">
+                                <Label Text="{Binding .}"/>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <IndicatorView x:Name="IndicadorControle"
+                           IndicatorColor="Green"
+                           Margin="0,0,0,10"
+                           IndicatorSize="20"
+                           SelectedIndicatorColor="LawnGreen"
+                           MaximumVisible="3" 
+                           HorizontalOptions="CenterAndExpand">
+                <IndicatorView.IndicatorTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="30" IsClippedToBounds="True">
+                            <!--<Image Source="net.png" WidthRequest="20"></Image>-->
+                        </Frame>
+                    </DataTemplate>
+                </IndicatorView.IndicatorTemplate>
+            </IndicatorView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

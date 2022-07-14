@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Classes.OnPlatform_OnIdiom.Detectar">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="OnPlatform/OnIdiom"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Label Text='{OnPlatform Android="SO: Android",iOS="SO: iOS",UWP="SO: UWP"}'
+                   BackgroundColor="{OnPlatform Android=LightGreen,iOS=LightGray}"
+                   Padding="20"
+                   Margin="10,0">
+                <Label.TextColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="Android" Value="green"/>
+                        <On Platform="iOS" Value="gray"/>
+                    </OnPlatform>
+                </Label.TextColor>
+            </Label>
+
+            <Label Text='{OnIdiom Phone="Smartphone",Tablet="Tablet",Desktop="PC"}'
+                   BackgroundColor="{OnIdiom Phone=LightBlue,Tablet=LightSalmon}"
+                   Padding="20"
+                   Margin="10,0">
+                <Label.TextColor>
+                    <OnIdiom x:TypeArguments="Color">
+                        <OnIdiom.Phone>Blue</OnIdiom.Phone>
+                        <OnIdiom.Tablet>Salmon</OnIdiom.Tablet>
+                    </OnIdiom>
+                </Label.TextColor>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    
+    <!--
+        OnPlatform : Detecta qual o SO
+        OnIdiom: Detecta qual o dispositivo
+        Existem 2 tipos de sintaxe como exibido acima e ainda o código C#.
+        É possível também combinar os dois e deixar ainda mais customizado.
+    -->

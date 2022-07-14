@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Layouts.AbsolutoLayout.Absoluto">
+    <ContentPage.Content>
+        <AbsoluteLayout BackgroundColor="Aquamarine" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <!--Desenho margem esquerda superior-->
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="0,0,100,20" AbsoluteLayout.LayoutFlags="PositionProportional"></BoxView>
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="0,0,20,100" AbsoluteLayout.LayoutFlags="PositionProportional"></BoxView>
+            <!--Desenho margem direita superior-->
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="1,0,100,20" AbsoluteLayout.LayoutFlags="PositionProportional"></BoxView>
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="1,0,20,100" AbsoluteLayout.LayoutFlags="PositionProportional"></BoxView>
+
+            <!--Desenho margem esquerda inferior-->
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="0,1,100,20" AbsoluteLayout.LayoutFlags="PositionProportional"></BoxView>
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="0,1,20,100" AbsoluteLayout.LayoutFlags="PositionProportional"></BoxView>
+            <!--Desenho margem direita inferior-->
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="1,1,100,20" AbsoluteLayout.LayoutFlags="PositionProportional"></BoxView>
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="1,1,20,100" AbsoluteLayout.LayoutFlags="PositionProportional"></BoxView>
+
+            <BoxView BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="0.5,0.5,0.5,0.5" AbsoluteLayout.LayoutFlags="All"></BoxView>
+            <Label Text="Absolute Layout" TextColor="White" BackgroundColor="Black" AbsoluteLayout.LayoutBounds="0.5,0.5,0.2,0.2" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

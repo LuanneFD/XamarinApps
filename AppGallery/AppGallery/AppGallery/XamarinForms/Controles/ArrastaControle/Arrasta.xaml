@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controles.ArrastaControle.Arrasta" Padding="10">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="SwipeView: Clicar e arrastar o elemento"/>
+            
+            <Label Text="Propriedades SwipeView : SwipeView.LeftItems"/>
+            <Label Text="SwipeBehaviorOnInvoked : manter aberto ou fechar após arrastar"/>
+            <Label Text="Mode Execute: Executa a ação de excluir sem precisar clicar "/>
+            <Label Text="Propriedades SwipeItem : IconImageSource, BackgroundColor, Text"/>
+            
+            <Label Text="Eventos SwipeItem: Invoked"/>
+            <Label Text="Eventos SwipeView: SwipeStarted, SwipeChanging, SwipeEnded"/>
+            
+            <Label Text="Observações: Requisito xamarin forms versão 4.4 ou superior"/>
+
+            <SwipeView SwipeStarted="SwipeView_SwipeStarted" SwipeChanging="SwipeView_SwipeChanging" SwipeEnded="SwipeView_SwipeEnded" Margin="10" BackgroundColor="Gray">
+                <SwipeView.LeftItems>
+                    <SwipeItems SwipeBehaviorOnInvoked="RemainOpen">
+                        <SwipeItem Invoked="SwipeItem_Invoked" IconImageSource="net.png" BackgroundColor="CornflowerBlue" Text="Detalhe"/>
+                        <SwipeItem Invoked="SwipeItem_Invoked_1" BackgroundColor="LightYellow" Text="Editar"/>
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+                
+                <SwipeView.RightItems>
+                    <SwipeItems Mode="Execute">
+                        <SwipeItemView>
+                            <StackLayout Padding="20" WidthRequest="100" BackgroundColor="LightSkyBlue">
+                            <Label Text="Visualizar" VerticalOptions="CenterAndExpand" TextColor="White"/>
+                            </StackLayout>
+                        </SwipeItemView>
+                        <SwipeItem Invoked="SwipeItem_Invoked_2" Text="Exluir" BackgroundColor="OrangeRed"/>
+                    </SwipeItems>
+                </SwipeView.RightItems>
+                
+            <Frame BorderColor="Gray">
+                <Label Text="Arrastar" TextColor="Red" FontSize="24" HorizontalOptions="Center"></Label>
+            </Frame>
+            </SwipeView>
+            
+            <Label x:Name="lblDetalhe" Text="-"/>
+            <Label x:Name="lblEditar" Text="-"/>
+            <Label x:Name="lblExcluir" Text="-"/>
+
+            <Label x:Name="lblStarted" Text="-"/>
+            <Label x:Name="lblChanging" Text="-"/>
+            <Label x:Name="lblEnded" Text="-"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

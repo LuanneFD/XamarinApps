@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Listas.CarouselView.Carousel" Padding="10">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="CarouselView"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Arraste para o lado e veja os outros itens da lista" 
+                   VerticalOptions="StartAndExpand" 
+                  HorizontalOptions="CenterAndExpand"/>
+            <!--
+            PeekAreaInsets: Indica o quanto de pixels é possível ver do elemento ao lado da lista no carousel
+            Position: Elemento da lista que será exibido primeiro
+            -->
+            <CarouselView 
+                x:Name="Carousel01" 
+                PositionChanged="Carousel01_PositionChanged" 
+                CurrentItemChanged="Carousel01_CurrentItemChanged" 
+                Position="3" PeekAreaInsets="40" 
+                RemainingItemsThreshold="1" 
+                RemainingItemsThresholdReached="Carousel01_RemainingItemsThresholdReached">
+              <!--  <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical">
+                        
+                    </LinearItemsLayout>
+                </CarouselView.ItemsLayout>
+                -->
+                <CarouselView.EmptyView>
+                    <Label Text="Nenhum Registro.." HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                </CarouselView.EmptyView>
+            <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                        <Frame HasShadow="True" CornerRadius="15" BorderColor="LightGreen">
+                            <StackLayout>
+                                <Label Text="{Binding Nome}" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
+                                <Label Text="{Binding Cargo}" TextColor="Gray" FontSize="14"/>
+                                <Label Text="{Binding Descricao}" FontSize="12" TextColor="DimGray"/>
+                            </StackLayout>
+                        </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <Label x:Name="lblPosition"/>
+            <Label x:Name="lblItem"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

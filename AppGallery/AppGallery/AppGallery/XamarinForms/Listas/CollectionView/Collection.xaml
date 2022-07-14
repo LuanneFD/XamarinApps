@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Listas.CollectionView.Collection">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="CollectionView" FontSize="14"
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Componente mais moderno do que listview" HorizontalOptions="CenterAndExpand" FontSize="13"/>
+            <Label Text="*Itens selecionados: " x:Name="lblitens"/>
+            <!-- Inifity Scroll
+            RemainingItemsThreshold: Grande quantidade de itens na lista, pode ser carregado aos poucos rodando a barra
+             de rolagem.
+            Depois de carregar quantos itens, deve-se buscar mais?
+            RemainingItemsThresholdReached: Depois de carregar 4 itens, esse evento é acionado para buscar o restante dos itens.
+            
+            ItemSizingStrategy:MeasureFirstItem (Performático)
+            Define a altura da linha dos itens da lista, pelo tamanho do primeiro item.
+            -->
+            <CollectionView x:Name="colecao01" 
+                            SelectionMode="Multiple" 
+                            SelectionChanged="colecao01_SelectionChanged" 
+                            ItemSizingStrategy="MeasureAllItems" 
+                            IsGrouped="True" 
+                            RemainingItemsThreshold="4" 
+                            RemainingItemsThresholdReached="colecao01_RemainingItemsThresholdReached">
+                <CollectionView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding Nome}" TextColor="Red" Padding="10"/>
+                    </DataTemplate>
+                </CollectionView.GroupHeaderTemplate>
+                <CollectionView.Header>
+                    <Label Text="Cabeçalho" Padding="10" HorizontalTextAlignment="Center" TextColor="Black" BackgroundColor="LightSteelBlue" FontAttributes="Bold"/>
+                </CollectionView.Header>
+                
+                <!--Neste componente é possível mudar a orientação da coleção para horizontal,
+                o scroll é colocado automatico. EX:
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10">
+                </LinearItemsLayout>
+                </CollectionView.ItemsLayout>
+                -->
+
+                <!--Span: quantidade de colunas-->
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="1" VerticalItemSpacing="1" HorizontalItemSpacing="1">
+
+                    </GridItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <!--VisualStateManager: define o layout do item quando selecionado/normal
+                            o x:Name="CommonStates" deve ter exatamente este nome para funcionar.Palavra reservada do Xamarin
+                            -->
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="#F2F2F2"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="#FFB1E5FF"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Label Text="{Binding Nome}" TextColor="Black"/>
+                            <Label Text="{Binding QuantidadeFranquias}" TextColor="Gray"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.Footer>
+                    <Label Text="Rodapé" Padding="10"  HorizontalTextAlignment="Center"  TextColor="Black" BackgroundColor="LightSteelBlue" FontAttributes="Bold"/>
+                </CollectionView.Footer>
+            </CollectionView>
+
+            <!--EmptyView: Mostra uma mensagem em caso de não existir itens na coleção
+            Pode ser colocado apenas a tag EmptyView ou customizar como no exemplo abaixo
+            -->
+            <CollectionView x:Name="colecao02">
+                <CollectionView.EmptyView>
+                    <Label Text="Não há dados na lista" 
+                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                           TextColor="White" Padding="10" FontAttributes="Bold" BackgroundColor="IndianRed"/>
+                </CollectionView.EmptyView>
+                <CollectionView.Header>
+                    <Label Text="Cabeçalho 02" Padding="10"  HorizontalTextAlignment="Center"  TextColor="Black" BackgroundColor="LightSteelBlue" FontAttributes="Bold"/>
+                </CollectionView.Header>
+                <CollectionView.Footer>
+                    <Label Text="Rodapé 02" Padding="10"  HorizontalTextAlignment="Center"  TextColor="Black" BackgroundColor="LightSteelBlue" FontAttributes="Bold"/>
+                </CollectionView.Footer>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

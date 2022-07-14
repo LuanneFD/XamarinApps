@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Estilos.DynamicStyle.Dynamic">
+    <ContentPage.Resources>
+        <Color x:Key="PrimaryColor">#E74C3C</Color>
+        <ResourceDictionary>
+            <Style x:Key="BotaoEstilo" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Accent"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="DynamicStyle" FontSize="14" FontAttributes="Bold" TextColor="Black"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry x:Name="cornova" Placeholder="Digite uma cor hexadecimal"/>
+            <Button Text="ok" Clicked="Button_Clicked"/>
+
+            <Button Text="STATIC" Style="{StaticResource BotaoEstilo}" BackgroundColor="{StaticResource PrimaryColor}"/>
+            <Button Text="DYNAMIC" Style="{StaticResource BotaoEstilo}" BackgroundColor="{DynamicResource PrimaryColor}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

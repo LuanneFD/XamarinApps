@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controles.ImagemControle.Imagem"
+             xmlns:ext="clr-namespace:AppGallery.XamarinForms.Controles.ImagemControle">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <!--Recurso - 1 imagem usada para todos os SO's-->
+                <Label Text="Source:Resource"/>
+                <Image x:Name="Imagem01" 
+                   Source="{ext:ImageResource AppGallery.XamarinForms.Controles.ImagemControle.crescimento.png}"
+                   Aspect="AspectFit"/>
+
+                <!--Arquivo - Imagens dentro dos projetos específicos do SO-->
+                <Label Text="Source:File,Aspect"/>
+                <Image Source="net.png" Aspect="Fill"/>
+                <!--Estica o máximo possível da imagem-->
+                <Image Source="net.png" Aspect="AspectFit"/>
+                <!--Mantem a proporção-->
+                <Image Source="net.png" Aspect="AspectFill"/>
+                <!--Zoom na imagem-->
+
+                <!--URI imagens devem ser públicas e só será exibida caso tenha conexão com internet-->
+                <Label Text="Source:Uri,Aspect"/>
+                <Image Source="https://image.shutterstock.com/image-photo/healthy-green-trees-forest-old-600w-437713483.jpg"></Image>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

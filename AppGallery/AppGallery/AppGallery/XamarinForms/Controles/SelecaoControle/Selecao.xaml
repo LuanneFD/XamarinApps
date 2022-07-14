@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGallery.XamarinForms.Controles.SelecaoControle.Selecao" Padding="10">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Items, Title, TitleColor"/>
+            <Picker Title="Selecione a marca" TitleColor="DarkGreen">
+                <Picker.Items>
+                    <x:String>FIAT</x:String>
+                    <x:String>FORD</x:String>
+                    <x:String>VW</x:String>
+                    <x:String>CHEVROLET</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="FontFamily, FontAttributes, FontSize, CharacterSpacing"/>
+            <Picker Title="Marca" CharacterSpacing="2" FontFamily="sans-serif-thin" FontAttributes="Italic" FontSize="23" TitleColor="DarkGreen">
+                <Picker.Items>
+                    <x:String>FIAT</x:String>
+                    <x:String>FORD</x:String>
+                    <x:String>VW</x:String>
+                    <x:String>CHEVROLET</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Eventos: SelectedIndexChanged"/>
+            <Picker x:Name="marca" Title="Selecione a marca" SelectedIndexChanged="Picker_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>FIAT</x:String>
+                    <x:String>FORD</x:String>
+                    <x:String>VW</x:String>
+                    <x:String>CHEVROLET</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label x:Name="lblinfo" Text="-"/>
+            <Button x:Name="limpar" Clicked="limpar_Clicked" Text="(Dica)Limpar Marca"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

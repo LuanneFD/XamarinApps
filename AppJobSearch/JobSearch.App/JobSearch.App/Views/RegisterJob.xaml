@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JobSearch.App.Views.RegisterJob">
+    <ContentPage.Content>
+        <StackLayout Spacing="10">
+            <StackLayout Orientation="Horizontal" Spacing="20">
+                <ImageButton Clicked="Voltar" Style="{StaticResource ButtonBack}"/>
+                <Label Text="JobSearch" Style="{StaticResource Title}" HorizontalOptions="Center" TranslationY="4"/>
+                <ImageButton Clicked="SaveJob" Style="{StaticResource SaveBack}"/>
+            </StackLayout>
+            <BoxView BackgroundColor="#D7CCFF" HeightRequest="1"/>
+            <ScrollView>
+                <StackLayout>
+                    <Label x:Name="txtMessages" TextColor="OrangeRed" LineHeight="1.2"/>
+                    
+                    <Frame StyleClass="EntryFrame" Margin="0,10,0,0">
+                        <Entry x:Name="txtempresa" ReturnType="Next" Placeholder="Empresa"/>
+                    </Frame>
+
+                    <Frame StyleClass="EntryFrame">
+                        <Entry x:Name="txtcargo" ReturnType="Next" Placeholder="Cargo"/>
+                    </Frame>
+
+                    <Frame StyleClass="EntryFrame">
+                        <Entry x:Name="txtcidade" ReturnType="Next" Placeholder="Cidade-UF"/>
+                    </Frame>
+
+                    <Frame StyleClass="EntryFrame">
+                        <Entry x:Name="txtsalario" ReturnType="Next" Keyboard="Numeric" Placeholder="Salário (reais)"/>
+                    </Frame>
+
+                    <Frame StyleClass="EntryFrame">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Padding="5,11" Text="Regime" FontFamily="MontserratRegular" FontSize="12" TextColor="{StaticResource DarkGrayBlue}" VerticalOptions="Center"/>
+                            <RadioButton x:Name="rbCLT" IsChecked="True" Content="CLT" GroupName="regime" HorizontalOptions="EndAndExpand"/>
+                            <RadioButton x:Name="rbPJ" Content="PJ"  GroupName="regime"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame StyleClass="EntryFrame">
+                        <Entry x:Name="txttecnologias" ReturnType="Next" Placeholder="Tecnologias/Ferramentas"/>
+                    </Frame>
+
+                    <Frame StyleClass="EntryFrame">
+                        <Editor x:Name="txtdescempresa"  Placeholder="Descrição da empresa" AutoSize="TextChanges"/>
+                    </Frame>
+
+                    <Frame StyleClass="EntryFrame">
+                        <Editor x:Name="txtdesctrabalho" Placeholder="Descrição da trabalho" AutoSize="TextChanges"/>
+                    </Frame>
+
+                    <Frame StyleClass="EntryFrame">
+                        <Editor x:Name="txtbeneficios" Placeholder="Benefícios" AutoSize="TextChanges"/>
+                    </Frame>
+
+                    <Frame StyleClass="EntryFrame">
+                        <Entry x:Name="txtemail" ReturnType="Done" Placeholder="Interessados enviar e-mail para"/>
+                    </Frame>
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

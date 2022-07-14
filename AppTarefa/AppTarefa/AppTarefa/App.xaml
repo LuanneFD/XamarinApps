@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTarefa.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Cadastrar-->
+            <Style x:Key="TituloCampo" TargetType="Label">
+                <Setter Property="FontFamily" Value="MontserratRegular" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+
+            <Style x:Key="BaseCampoEntrada" TargetType="InputView">
+                <Setter Property="PlaceholderColor" Value="Black" />
+                <Setter Property="TextColor" Value="#888" />
+            </Style>
+
+            <Style x:Key="CampoEntradaEntry" TargetType="Entry" BasedOn="{StaticResource BaseCampoEntrada}">
+                <Setter Property="FontFamily" Value="MontserratRegular" />
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+
+            <Style x:Key="CampoEntradaEditor" TargetType="Editor" BasedOn="{StaticResource BaseCampoEntrada}">
+                <Setter Property="FontFamily" Value="MontserratRegular" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="AutoSize" Value="TextChanges" />
+            </Style>
+
+            <Style x:Key="DataHora" TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="MontserratLight" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="#888888" />
+            </Style>
+
+            <Style x:Key="BotaoAdicionar" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#4043C9" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="VerticalOptions" Value="EndAndExpand" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="Visual" Value="Default" />
+                <Setter Property="Padding" Value="20,10" />
+            </Style>
+
+            <!--Listar-->
+            <Style x:Key="Hora" TargetType="Label">
+                <Setter Property="TextColor" Value="#939393" />
+                <Setter Property="FontFamily" Value="MontserratLight" />
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+
+            <Style x:Key="Quantidade" TargetType="Label">
+                <Setter Property="TextColor" Value="#888888" />
+                <Setter Property="FontFamily" Value="MontserratRegular" />
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+
+            <Style x:Key="BotaoArredondado" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#4043C9" />
+                <Setter Property="CornerRadius" Value="38" />
+                <Setter Property="FontSize" Value="36" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="HeightRequest" Value="76" />
+                <Setter Property="WidthRequest" Value="76" />
+                <Setter Property="TranslationY" Value="-30" />
+            </Style>
+
+            <!--Visualizar-->
+            <Style x:Key="Label" TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontFamily" Value="MontserratBold" />
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+
+            <Color x:Key="PrioridadeBaixa">#00ABFF</Color>
+            <Color x:Key="PrioridadeNormal">#E0E00C</Color>
+            <Color x:Key="PrioridadeAlta">#FF6969</Color>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
